@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meel.Me, Where you meet for a meel!</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- This file, jQuery MUST STAY INSIDE THE HEAD, otherwise not all functions of the theme will work. Please do not move the line below -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<!-- PRELOADER START -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<!-- PRELOADER END -->
+    <div class="container">
+    	<!-- Opener Headings START -->
+        <div class="opener row">
+        	<div class="col-xs-12">
+            	<div class="text-center">
+                	<ul id="vertical-ticker">
+                    	<li><h1>We Are Meel.Me</span></h1></li>
+                        <li><h1>We Our On A Simple Mission</h1></li>
+                        <li><h1>To Bring People Together</span></h1></li>
+                        <li><h1>At the Dinner Table</span></h1></li>
+                        <li><h1>All Over the Globe</span></h1></li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+        <!-- Opener Headings END -->
+        <!-- Countdown Section START -->
+        <div class="row">
+            <div class="countdown">
+                <!-- This is offset to bring the circles closer together -->
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="col-xs-6 col-sm-3 text-center">
+                        <!-- Creating the circle around the content here -->
+                        <div class="circle">
+                            <!-- This will center the content inside the circle -->
+                            <div class="circle-container">
+                                <!-- This is where the Day Digits will spawn -->
+                                <h2><span id="DBox"></span></h2>
+                                <!-- This is where the Day Caption will spawn -->
+                                <p><span id="DCaption"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-3 text-center">
+                        <div class="circle">
+                            <div class="circle-container">
+                                <h2><span id="HBox"></span></h2>
+                                <p><span id="HCaption"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-3 text-center">
+                        <div class="circle">
+                            <div class="circle-container">
+                                <h2><span id="MBox"></span></h2>
+                                <p><span id="MCaption"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-3 text-center">
+                        <div class="circle">
+                            <div class="circle-container">
+                                <h2><span id="SBox"></span></h2>
+                                <p><span id="SCaption"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Countdown Section END -->
+            <div class="col-xs-12">
+                <div class="text-center">
+                        <h4>Dinner's Almost Ready, Stay in Touch Below!</h4>
+                </div>
+            </div>
+        <!-- Subscribe Section START -->
+        <div class="row">
+            <div class="subscribe">
+                <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 input-group">
+                    <form action="php/subscribe.php" id="invite" method="POST">
+                        <div class="input-group">
+                            <input type="email" name="email" id="address" class="form-control input-lg" placeholder="Your email address" required autofocus>
+                            <div class="input-group-addon">
+                                <button type="submit" class="btn btn-primary"><i id="button-icon" class="fa fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <span id="result"></span>
+					<script type="text/javascript" src="js/emailsubmission.js"></script>
+                </div>
+            </div>
+        </div>
+        <!-- Subscribe Section END -->
+        <!-- Icon Section START -->
+        <div class="row">
+        	<div class="iconsection">
+		        <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-5 input-group">
+			        <div class="text-center">
+			            <div class="col-xs-3"><a href="#"><i class="fa fa-facebook fa-2x"></i></a></div>
+			            <div class="col-xs-2"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></div>
+			            <!-- <div class="col-xs-2"><a href="#"><i class="fa fa-youtube fa-2x"></i></a></div>
+			            <div class="col-xs-2"><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></div>
+			            <div class="col-xs-2"><a href="#"><i class="fa fa-tumblr fa-2x"></i></a></div>
+			            <div class="col-xs-2"><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></di> -->
+			        </div>
+		        </div>
+	        </div>
+        </div>
+        <!-- Icon Section END -->
+    </div>
+    <!-- All Javascript files at the end, preventing a "blocked rendering in some browsers" until all scripts are loaded. (IExplorer) -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ketchup.all.min.js"></script>
+    <script type="text/javascript">
+
+        // Totemticker Customization    
+        $(function(){
+            $('#vertical-ticker').totemticker({
+                row_height  :   '100px',
+                speed       :   800,
+                mousestop   :   false,
+            });
+        });
+
+        // Preloader Customization 
+        $(window).load(function() {
+            $('#status').fadeOut();
+            $('#preloader').delay(350).fadeOut('slow');
+            $('body').delay(350).css({'overflow':'visible'});
+        })
+
+    </script>
+    <script type="text/javascript">cd();</script>
+</body>
+</html>
